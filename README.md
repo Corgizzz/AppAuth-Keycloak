@@ -335,7 +335,7 @@
     
     1. 方法2: 先獲得Authorization Code 再執行 Exchange Code 獲得 Access Token
     
-    先獲得 Auth Code
+        先獲得 Auth Code
         
         ```swift
         @IBAction func WithOutAutoButtonTapped(_ sender: Any) {
