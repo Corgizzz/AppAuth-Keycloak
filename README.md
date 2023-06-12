@@ -16,52 +16,48 @@
 
 1. 登入KeyCloak後，創建一個Realm
     
-    ![截圖 2023-06-07 10.26.08.png](Screenshot%20eea5eebb27b447b490d0fa6f0d0bcd1d/%25E6%2588%25AA%25E5%259C%2596_2023-06-07_10.26.08.png)
+    ![ ](Screenshot/截圖 2023-06-07 10.26.08.png)
     
 
 1. 輸入Realm Name後點擊 Create
     
-    ![截圖 2023-06-07 10.27.46.png](Screenshot%20eea5eebb27b447b490d0fa6f0d0bcd1d/%25E6%2588%25AA%25E5%259C%2596_2023-06-07_10.27.46.png)
+    ![ ](Screenshot/截圖 2023-06-07 10.27.46.png)
     
-
-![Untitled](Screenshot%20eea5eebb27b447b490d0fa6f0d0bcd1d/Untitled.png)
 
 1. 切換至剛剛創建的Realm，左邊選取Clients，點擊畫面中的 Create Client
     
-    ![截圖 2023-06-07 10.30.01.png](Screenshot%20eea5eebb27b447b490d0fa6f0d0bcd1d/%25E6%2588%25AA%25E5%259C%2596_2023-06-07_10.30.01.png)
+    ![ ](Screenshot/截圖 2023-06-07 10.30.01.png)
     
 
 1. 設定 Client ID，後兩頁不用設定，直接按儲存就好。
     
-    ![截圖 2023-06-12 14.03.57.png](Screenshot%20eea5eebb27b447b490d0fa6f0d0bcd1d/%25E6%2588%25AA%25E5%259C%2596_2023-06-12_14.03.57.png)
+    ![ ](Screenshot/截圖 2023-06-12 14.03.57.png)
     
 
 1. 左邊選取Users，點擊畫面中的 Create New User
     
-    ![截圖 2023-06-07 10.38.02.png](Screenshot%20eea5eebb27b447b490d0fa6f0d0bcd1d/%25E6%2588%25AA%25E5%259C%2596_2023-06-07_10.38.02.png)
+    ![ ](Screenshot/截圖 2023-06-07 10.38.02.png)
     
-
-![Untitled](Screenshot%20eea5eebb27b447b490d0fa6f0d0bcd1d/Untitled%201.png)
 
 1. 輸入部分資料，等等登入時會用到這組帳號
     
-    ![截圖 2023-06-07 10.40.44.png](Screenshot%20eea5eebb27b447b490d0fa6f0d0bcd1d/%25E6%2588%25AA%25E5%259C%2596_2023-06-07_10.40.44.png)
+    ![ ](Screenshot/截圖 2023-06-07 10.40.44.png)
     
 
 1. 點擊剛剛創建的User，選取 Credentials，點擊 Set Password，
 ( 在上一步驟我們只有創建帳號，但是並沒有設定到密碼 )
     
-    ![Untitled](Screenshot%20eea5eebb27b447b490d0fa6f0d0bcd1d/Untitled%202.png)
+    ![ ](Screenshot/111.png)
     
 
 1. 輸入密碼後，記得將 Tempoary 選取 Off，否則會在第一次登入後就要求User變更密碼。
     
-    ![截圖 2023-06-07 10.45.04.png](Screenshot%20eea5eebb27b447b490d0fa6f0d0bcd1d/%25E6%2588%25AA%25E5%259C%2596_2023-06-07_10.45.04.png)
+    ![ ](Screenshot/截圖 2023-06-07 10.45.04.png)
     
 
 1. 回到Client中選取剛剛創建的Client並進行相關設定，其中 **Valid redirect URIs 十分重要**
     
-    ![截圖 2023-06-12 14.06.08.png](Screenshot%20eea5eebb27b447b490d0fa6f0d0bcd1d/%25E6%2588%25AA%25E5%259C%2596_2023-06-12_14.06.08.png)
+    ![ ](Screenshot/截圖 2023-06-12 14.06.08.png)
     
 
 ## AppAuth
@@ -76,9 +72,9 @@
     
     1. pod install
 - 實作
-    1. 現在畫面中放置三個Button
+    1. 在畫面中放置三個Button
         
-        ![simulator_screenshot_4C6A430E-F776-4997-84DA-9E39728ED403.png](Screenshot%20eea5eebb27b447b490d0fa6f0d0bcd1d/simulator_screenshot_4C6A430E-F776-4997-84DA-9E39728ED403.png)
+        ![ ](Screenshot/simulator_screenshot_4C6A430E-F776-4997-84DA-9E39728ED403.png)
         
     2. AppDelegate
         
@@ -202,15 +198,15 @@
         
         Issuer與其他EndPoint可以在這裡查看。
         
-        ![截圖 2023-06-12 14.15.19.png](Screenshot%20eea5eebb27b447b490d0fa6f0d0bcd1d/%25E6%2588%25AA%25E5%259C%2596_2023-06-12_14.15.19.png)
+        ![ ](Screenshot/截圖 2023-06-12 14.15.19.png)
         
-        ![截圖 2023-06-12 14.16.48.png](Screenshot%20eea5eebb27b447b490d0fa6f0d0bcd1d/%25E6%2588%25AA%25E5%259C%2596_2023-06-12_14.16.48.png)
+        ![ ](Screenshot/截圖 2023-06-12 14.16.48.png)
         
         redirectURI 填入與KeyCloak章節第9點 com.corgi.oauth2:/oauth2redirect/example-provider
         
         Xcode Project也要設定 URL Types
         
-        ![截圖 2023-06-12 14.22.36.png](Screenshot%20eea5eebb27b447b490d0fa6f0d0bcd1d/%25E6%2588%25AA%25E5%259C%2596_2023-06-12_14.22.36.png)
+        ![ ](Screenshot/截圖 2023-06-12 14.22.36.png)
         
     5. 獲得Server的Config相關設定，並將設定存到configuration
         
@@ -297,7 +293,7 @@
     7. 這時候去點AutoWithExchangeCode按鈕會跑出下列錯誤，
     因為Server是使用https但目前沒有掛一張合法的憑證所以會被Apple擋下
         
-        ![截圖 2023-06-12 14.32.07.png](Screenshot%20eea5eebb27b447b490d0fa6f0d0bcd1d/%25E6%2588%25AA%25E5%259C%2596_2023-06-12_14.32.07.png)
+        ![ ](Screenshot/截圖 2023-06-12 14.32.07.png)
         
     8. 解決辦法
         
@@ -321,21 +317,21 @@
         
     9. 這時候再次點擊按鈕則會跑出另外一個問題，原因一樣是因為沒有合法的憑證。
     
-    在測試時先點擊`顯示詳細資訊`
+    在測試時先點擊顯示詳細資訊
         
-        ![Untitled](Screenshot%20eea5eebb27b447b490d0fa6f0d0bcd1d/Untitled%203.png)
+        !(Screenshot/aaa.png)
         
         再點擊`參訪此網站`
         
-        ![Untitled](Screenshot%20eea5eebb27b447b490d0fa6f0d0bcd1d/Untitled%204.png)
+        ![ ](Screenshot/bbb.png)
         
     10. 輸入在KeyCloak創建User的帳號密碼
         
-        ![simulator_screenshot_346844CB-51C4-4A4C-A33C-35D99F9FA07F.png](Screenshot%20eea5eebb27b447b490d0fa6f0d0bcd1d/simulator_screenshot_346844CB-51C4-4A4C-A33C-35D99F9FA07F.png)
+        ![ ](Screenshot/simulator_screenshot_346844CB-51C4-4A4C-A33C-35D99F9FA07F)
         
         等入成功後會獲得 `Access Token`
         
-        ![截圖 2023-06-12 15.21.50.png](Screenshot%20eea5eebb27b447b490d0fa6f0d0bcd1d/%25E6%2588%25AA%25E5%259C%2596_2023-06-12_15.21.50.png)
+        ![ ](Screenshot/截圖 2023-06-12 15.21.50.png)
         
     
     1. 方法2: 先獲得Authorization Code 再執行 Exchange Code 獲得 Access Token
@@ -383,7 +379,7 @@
         
         `Auth Code`
         
-        ![截圖 2023-06-12 15.33.08.png](Screenshot%20eea5eebb27b447b490d0fa6f0d0bcd1d/%25E6%2588%25AA%25E5%259C%2596_2023-06-12_15.33.08.png)
+        ![ ](Screenshot/截圖 2023-06-12 15.33.08.png)
         
         拿到Auth Code後再去執行 Exchange Code 換取 Access Token
         
@@ -413,7 +409,7 @@
         
         `Access Token`
         
-        ![截圖 2023-06-12 15.34.33.png](Screenshot%20eea5eebb27b447b490d0fa6f0d0bcd1d/%25E6%2588%25AA%25E5%259C%2596_2023-06-12_15.34.33.png)
+        ![ ](Screenshot/截圖 2023-06-12 15.34.33.png)
         
     
     1. 使用 Access Token 獲得 User Info
@@ -513,7 +509,7 @@
         }
         ```
         
-        ![simulator_screenshot_2845170A-3175-4D84-8CC2-F4366359954D.png](Screenshot%20eea5eebb27b447b490d0fa6f0d0bcd1d/simulator_screenshot_2845170A-3175-4D84-8CC2-F4366359954D.png)
+        ![ ](Screenshot/simulator_screenshot_2845170A-3175-4D84-8CC2-F4366359954D.png)
         
     2. 登出使用者
         
