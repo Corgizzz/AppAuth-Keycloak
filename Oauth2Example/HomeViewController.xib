@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Oauth2Example" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="VXr-sk-E0i"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZQ-Gq-c2b">
+                    <rect key="frame" x="20" y="386" width="353" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="Ew9-6q-N92"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="WithOutExchangeCode"/>
+                    <connections>
+                        <action selector="WithOutAutoButtonTapped:" destination="-2" eventType="touchUpInside" id="Jvn-8H-9tE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StT-Ib-3t6">
+                    <rect key="frame" x="20" y="486" width="353" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="sqN-LX-Uyc"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="ExhangeCode"/>
+                    <connections>
+                        <action selector="ExchangeButtonTapped:" destination="-2" eventType="touchUpInside" id="nG1-0I-lWH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kif-yN-xTv">
+                    <rect key="frame" x="20" y="286" width="353" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="5yW-WQ-Kce"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="AutoWithExchangeCode"/>
+                    <connections>
+                        <action selector="AutoButtonTapped:" destination="-2" eventType="touchUpInside" id="koj-RS-9XM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="kif-yN-xTv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0Ol-sy-q7u"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uZQ-Gq-c2b" secondAttribute="trailing" constant="20" id="Ovj-HL-Vkz"/>
+                <constraint firstItem="uZQ-Gq-c2b" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VNX-oe-7Tu"/>
+                <constraint firstItem="kif-yN-xTv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="WYV-dq-lPS"/>
+                <constraint firstItem="StT-Ib-3t6" firstAttribute="top" secondItem="uZQ-Gq-c2b" secondAttribute="bottom" constant="20" id="btP-uZ-Ude"/>
+                <constraint firstItem="uZQ-Gq-c2b" firstAttribute="top" secondItem="kif-yN-xTv" secondAttribute="bottom" constant="20" id="djU-OG-1sy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kif-yN-xTv" secondAttribute="trailing" constant="20" id="gu9-5b-qdv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="StT-Ib-3t6" secondAttribute="trailing" constant="20" id="h21-NM-SNb"/>
+                <constraint firstItem="StT-Ib-3t6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="hgU-nd-ObB"/>
+                <constraint firstItem="uZQ-Gq-c2b" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="nrZ-SP-dH3"/>
+                <constraint firstItem="uZQ-Gq-c2b" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="vlK-Ay-muh"/>
+            </constraints>
+            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
