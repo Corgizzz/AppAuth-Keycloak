@@ -316,18 +316,17 @@
         ```
         
     9. 這時候再次點擊按鈕則會跑出另外一個問題，原因一樣是因為沒有合法的憑證。
-    
-    在測試時先點擊顯示詳細資訊
-        
-        !(Screenshot/aaa.png)
-        
+        在測試時先點擊顯示詳細資訊
+
+        ![ ](Screenshot/1686553990368.jpg)
+
         再點擊`參訪此網站`
         
-        ![ ](Screenshot/bbb.png)
-        
+        ![ ](Screenshot/1686554002173.jpg)
+ 
     10. 輸入在KeyCloak創建User的帳號密碼
         
-        ![ ](Screenshot/simulator_screenshot_346844CB-51C4-4A4C-A33C-35D99F9FA07F)
+        ![ ](Screenshot/simulator_screenshot_346844CB-51C4-4A4C-A33C-35D99F9FA07F.png)
         
         等入成功後會獲得 `Access Token`
         
@@ -379,7 +378,7 @@
         
         `Auth Code`
         
-        ![ ](Screenshot/截圖 2023-06-12 15.33.08.png)
+        ![](Screenshot/截圖 2023-06-12 15.33.08.png)
         
         拿到Auth Code後再去執行 Exchange Code 換取 Access Token
         
