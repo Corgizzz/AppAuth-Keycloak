@@ -19,7 +19,7 @@ class HomeViewController: BaseViewController {
     let clientID: String = "DemoClient";
     
     //The OAuth redirect URI for the client @ clientID.
-    let redirectURI: String = "com.corgi.oauth2:/oauth2redirect/example-provider";
+    let redirectURI: String = "cathayoauth://oauthredirect/test"
     
     var configuration: OIDServiceConfiguration? = nil
     
@@ -70,10 +70,16 @@ extension HomeViewController {
         print("responseType: \(request.responseType)")
         print("--------------------------------------------------------")
         
-        appDelegate.currentAuthorizationFlow = OIDAuthState.authState(byPresenting: request, presenting: self) { authState, error in
+//        let userAgent = OIDExternalUserAgentIOSCustomBrowser.customBrowserChrome()
+        guard let userAgent = OIDExternalUserAgentIOS(presenting: self, prefersEphemeralSession: true) else { return }
+        appDelegate.currentAuthorizationFlow = OIDAuthState.authState(byPresenting: request, externalUserAgent: userAgent) { authState, error in
+//        appDelegate.currentAuthorizationFlow = OIDAuthState.authState(byPresenting: request, presenting: self) { authState, error in
             if let authState = authState {
                 print("Got authorization tokens. Access token: \(authState.lastTokenResponse?.accessToken ?? "DEFAULT_TOKEN")")
                 OauthManager.shared.setAuthState(authState)
+                print(OauthManager.shared.authState?.lastAuthorizationResponse.request.codeChallengeMethod)
+                print(OauthManager.shared.authState?.lastAuthorizationResponse.request.codeChallenge)
+                print(OauthManager.shared.authState?.lastAuthorizationResponse.request.codeVerifier)
                 if OauthManager.shared.authState?.isAuthorized == true {
                     let vc = UserInfoViewController(nibName: "UserInfoViewController", bundle: nil)
                     self.pushViewController(vc)

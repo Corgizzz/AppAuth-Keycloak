@@ -19,7 +19,7 @@ class UserInfoViewController: BaseViewController {
     let clientID: String? = "DemoClient";
     
     //The OAuth redirect URI for the client @ clientID.
-    let redirectURI: String = "com.corgi.oauth2:/oauth2redirect/example-provider";
+    let redirectURI: String = "cathayoauth://oauth2redirect/test";
     
     @IBOutlet var userAccount: UILabel!
     @IBOutlet var userName: UILabel!
@@ -100,6 +100,10 @@ class UserInfoViewController: BaseViewController {
         OauthManager.shared.authState?.performAction() { (accessToken, idToken, error) in
             if error != nil  {
                 print("Error fetching fresh tokens: \(error?.localizedDescription ?? "ERROR")")
+                OauthManager.shared.setAuthState(nil)
+                if OauthManager.shared.authState?.isAuthorized != true {
+                    self.popViewController()
+                }
                 return
             }
             
