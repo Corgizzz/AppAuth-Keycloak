@@ -2,7 +2,7 @@
 //  OauthManager.swift
 //  Oauth2Example
 //
-//  Created by 00591908 on 2023/6/8.
+//  Created by Corgi on 2023/6/8.
 //
 
 import Foundation
@@ -20,6 +20,8 @@ class OauthManager: NSObject {
         
         if let authState = self.authState {
             data = NSKeyedArchiver.archivedData(withRootObject: authState)
+            print("123123", String(data: data!, encoding: .utf8))
+
         }
         
         if let userDefaults = UserDefaults(suiteName: "group.net.openid.appauth.Example") {

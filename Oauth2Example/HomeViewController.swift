@@ -2,7 +2,7 @@
 //  HomeViewController.swift
 //  Oauth2Example
 //
-//  Created by 00591908 on 2023/6/6.
+//  Created by Corgi on 2023/6/6.
 //
 
 import AppAuth
@@ -13,7 +13,7 @@ typealias PostRegistrationCallback = (_ configuration: OIDServiceConfiguration?,
 class HomeViewController: BaseViewController {
     
     // The OIDC issuer from which the configuration will be discovered.
-    let issuer: String = "https://54.95.116.212:8443/realms/Oauth2Example";
+    let issuer: String = "https://keycloak.ipe.codes/realms/Oauth2Example";
     
     //The OAuth client ID.
     let clientID: String = "DemoClient";

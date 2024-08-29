@@ -2,7 +2,7 @@
 //  UserInfoViewController.swift
 //  Oauth2Example
 //
-//  Created by 00591908 on 2023/6/7.
+//  Created by Corgi on 2023/6/7.
 //
 
 import AppAuth
@@ -13,13 +13,13 @@ class UserInfoViewController: BaseViewController {
     let kAppAuthExampleAuthStateKey: String = "authState";
     
     // The OIDC issuer from which the configuration will be discovered.
-    let issuer: String = "https://54.95.116.212:8443/realms/Oauth2Example";
+    let issuer: String = "https://keycloak.ipe.codes/realms/Oauth2Example";
     
     //The OAuth client ID.
     let clientID: String? = "DemoClient";
     
     //The OAuth redirect URI for the client @ clientID.
-    let redirectURI: String = "cathayoauth://oauth2redirect/test";
+    let redirectURI: String = "cathayoauth://oauthredirect/test";
     
     @IBOutlet var userAccount: UILabel!
     @IBOutlet var userName: UILabel!

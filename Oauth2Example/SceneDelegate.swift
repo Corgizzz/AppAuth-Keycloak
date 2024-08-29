@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Oauth2Example
 //
-//  Created by 00591908 on 2023/6/6.
+//  Created by Corgi on 2023/6/6.
 //
 
 import UIKit
